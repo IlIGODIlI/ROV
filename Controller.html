@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Phone Keyboard</title>
+
+<style>
+
+body{
+margin:0;
+background:#111;
+color:white;
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+/* Landscape layout */
+.keyboard{
+width:95vw;
+}
+
+.row{
+display:flex;
+justify-content:center;
+margin:4px 0;
+}
+
+button{
+flex:1;
+height:60px;
+margin:3px;
+font-size:18px;
+border-radius:8px;
+border:none;
+background:#333;
+color:white;
+}
+
+button:active{
+background:#777;
+}
+
+.wide{
+flex:2;
+}
+
+.space{
+flex:5;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="keyboard">
+
+<div class="row">
+<button ontouchstart="press('1')" ontouchend="release('1')">1</button>
+<button ontouchstart="press('2')" ontouchend="release('2')">2</button>
+<button ontouchstart="press('3')" ontouchend="release('3')">3</button>
+<button ontouchstart="press('4')" ontouchend="release('4')">4</button>
+<button ontouchstart="press('5')" ontouchend="release('5')">5</button>
+<button ontouchstart="press('6')" ontouchend="release('6')">6</button>
+<button ontouchstart="press('7')" ontouchend="release('7')">7</button>
+<button ontouchstart="press('8')" ontouchend="release('8')">8</button>
+<button ontouchstart="press('9')" ontouchend="release('9')">9</button>
+<button ontouchstart="press('0')" ontouchend="release('0')">0</button>
+</div>
+
+<div class="row">
+<button ontouchstart="press('q')" ontouchend="release('q')">Q</button>
+<button ontouchstart="press('w')" ontouchend="release('w')">W</button>
+<button ontouchstart="press('e')" ontouchend="release('e')">E</button>
+<button ontouchstart="press('r')" ontouchend="release('r')">R</button>
+<button ontouchstart="press('t')" ontouchend="release('t')">T</button>
+<button ontouchstart="press('y')" ontouchend="release('y')">Y</button>
+<button ontouchstart="press('u')" ontouchend="release('u')">U</button>
+<button ontouchstart="press('i')" ontouchend="release('i')">I</button>
+<button ontouchstart="press('o')" ontouchend="release('o')">O</button>
+<button ontouchstart="press('p')" ontouchend="release('p')">P</button>
+</div>
+
+<div class="row">
+<button ontouchstart="press('a')" ontouchend="release('a')">A</button>
+<button ontouchstart="press('s')" ontouchend="release('s')">S</button>
+<button ontouchstart="press('d')" ontouchend="release('d')">D</button>
+<button ontouchstart="press('f')" ontouchend="release('f')">F</button>
+<button ontouchstart="press('g')" ontouchend="release('g')">G</button>
+<button ontouchstart="press('h')" ontouchend="release('h')">H</button>
+<button ontouchstart="press('j')" ontouchend="release('j')">J</button>
+<button ontouchstart="press('k')" ontouchend="release('k')">K</button>
+<button ontouchstart="press('l')" ontouchend="release('l')">L</button>
+</div>
+
+<div class="row">
+<button class="wide" ontouchstart="press('shift')" ontouchend="release('shift')">SHIFT</button>
+
+<button ontouchstart="press('z')" ontouchend="release('z')">Z</button>
+<button ontouchstart="press('x')" ontouchend="release('x')">X</button>
+<button ontouchstart="press('c')" ontouchend="release('c')">C</button>
+<button ontouchstart="press('v')" ontouchend="release('v')">V</button>
+<button ontouchstart="press('b')" ontouchend="release('b')">B</button>
+<button ontouchstart="press('n')" ontouchend="release('n')">N</button>
+<button ontouchstart="press('m')" ontouchend="release('m')">M</button>
+
+<button class="wide" ontouchstart="press('backspace')" ontouchend="release('backspace')">⌫</button>
+</div>
+
+<div class="row">
+<button class="wide" ontouchstart="press('left')" ontouchend="release('left')">←</button>
+<button class="wide" ontouchstart="press('down')" ontouchend="release('down')">↓</button>
+<button class="wide" ontouchstart="press('up')" ontouchend="release('up')">↑</button>
+<button class="wide" ontouchstart="press('right')" ontouchend="release('right')">→</button>
+</div>
+
+<div class="row">
+<button class="space" ontouchstart="press('space')" ontouchend="release('space')">SPACE</button>
+<button class="wide" ontouchstart="press('enter')" ontouchend="release('enter')">ENTER</button>
+</div>
+
+</div>
+
+<script>
+
+function press(key){
+fetch("/keydown/"+key)
+}
+
+function release(key){
+fetch("/keyup/"+key)
+}
+
+</script>
+
+</body>
+</html>
