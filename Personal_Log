@@ -1,0 +1,25 @@
+========================================================================================================================================
+This app is an attempt to make a controller through the Android interface Linked to the system inputs , via a python backend server
+i made this app just to play Hollow Knight cause my keyboard would die if i played the game on it.
+
+This app has a logic based on webport , https signals and pyautogui input -- > output conversion , the backend server logic was 
+developed using python ( cause i love that language ) , and the external GUI and interface was developed using flask and Dart(Java)
+because they were more reliable for my purpose than react or any web based app cause , an android app enable much more controls 
+than a web port.
+
+This was a project done entirely out of passion and the drive to play hollow knight therefore it is not perfect rn, i plan to 
+add a few more buttons on the gamepad version but other than that the game is playable , and this was also an attempt to prove 
+my proffessor wrong so i guess a win win.
+
+This is also my Second Time Uploading on to Git Hub, i have made apps prior to this but they were of miniscule importance and 
+moreover i was also not informed about git hub. Currently this is my first personal project on the app so treat this as a beginners 
+attempt at this.
+
+I won't be returning to this project Soon , cause all the features i need are present in the latest version and i won't be updating
+this as well. but I may or may not come back to this project in the future to use my skills and polish this further and reduce latency 
+even more.
+
+with that said Farewell to anyone reading this and yes i did use chat gpt for the ui stuff and to make the code clean , (didn't use 
+it for the logic though).
+
+====================================================================================================================================
